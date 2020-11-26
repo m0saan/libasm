@@ -26,7 +26,6 @@ int main() {
     printf("dst1: %s\n", ft_strcpy(dst1, src));
     printf("dst: %s\n", strcpy(dst, src));
 
-*/
     printf("----------------------- ft_strcmp ----------------------- \n");
 
     const char *str1 = "H";
@@ -34,14 +33,14 @@ int main() {
 
     printf("%d\n", strcmp(str1, str2));
     printf("%d\n", ft_strcmp(str1, str2));
-
+*/
     printf("----------------------- ft_write ----------------------- \n");
 
     const char *s1 = "";
-    const char *s2 = "Print this string to the standard output";
+    const char *s2 = "Print this string to the standard output\n";
 
-    write(1, s1, strlen(s1));
-    write(1, s2, strlen(s2));
+    //printf("%lu",write(1, s1, strlen(s1)));
+    //printf("%lu",write(1, s2, strlen(s2)));
 
     ft_write(1, s1, strlen(s1));
     ft_write(1, s2, strlen(s2));
