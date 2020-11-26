@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <errno.h>
 #include <memory.h>
 
 extern size_t ft_strlen(const char *s);
-extern  char *ft_strcpy(char * dst, const char * src);
-extern  int ft_strcmp(const char *s1, const char *s2);
+extern char *ft_strcpy(char * dst, const char * src);
+extern int ft_strcmp(const char *s1, const char *s2);
+extern size_t ft_write(int fil_des, const void *buf, size_t n_byte);
 
 
 int main() {
@@ -31,5 +34,16 @@ int main() {
 
     printf("%d\n", strcmp(str1, str2));
     printf("%d\n", ft_strcmp(str1, str2));
+
+    printf("----------------------- ft_write ----------------------- \n");
+
+    const char *s1 = "";
+    const char *s2 = "Print this string to the standard output";
+
+    write(1, s1, strlen(s1));
+    write(1, s2, strlen(s2));
+
+    ft_write(1, s1, strlen(s1));
+    ft_write(1, s2, strlen(s2));
     return 0;
 }
