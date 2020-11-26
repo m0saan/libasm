@@ -27,7 +27,7 @@ int main() {
     printf("----------------------- ft_strcmp ----------------------- \n");
 
     const char *str1 = "H";
-    const char *str2 = "H";
+    const char *str2 = "Hss";
 
     printf("%d\n", strcmp(str1, str2));
     printf("%d\n", ft_strcmp(str1, str2));
