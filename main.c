@@ -42,7 +42,7 @@ int main() {
     //printf("%lu",write(1, s1, strlen(s1)));
     //printf("%lu",write(1, s2, strlen(s2)));
 
-    ft_write(1, s1, strlen(s1));
-    ft_write(1, s2, strlen(s2));
+    printf("%zu: \n", ft_write(1, s1, strlen(s1)));
+    printf("%zu: \n", ft_write(1, s2, strlen(s2)));
     return 0;
 }
