@@ -6,9 +6,6 @@ extern      ___error
 section     .text
 
 _ft_write:          ; rdi = file descriptor, rsi = string, rdx = string length
-    cmp rdx, 0      ; check if the str lenght is < 0
-    jl len_error    ; if len < 0 ==> call len_error
-
     mov rbx, rdx
     mov rax, SYS_WRITE_MAC
     syscall
@@ -17,13 +14,9 @@ _ft_write:          ; rdi = file descriptor, rsi = string, rdx = string length
     mov rax, rbx    ; put the printed chars length in rax
     ret             ; return rax
 
-len_error:
-    mov rax, -1
-    ret
-
 error:
-    mov rbx, rax     ; save errno
-    call ___error    ; rax is now points to external variable errno.
-    mov [rax], rbx
-    mov rax, 0
+    push rax        ; save errno
+    call ___error   ; rax is now points to external variable errno.
+    pop qword[rax]  ; The QWORD PTR is just a size specifier (It means that a 64 bit value is read from the address)
+    mov rax, -1
     ret
