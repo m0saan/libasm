@@ -28,10 +28,10 @@ build:
 	@ gcc main.c $(NAME) && ./a.out
 
 clean:
-	@ rm $(OBJ)
+	@ rm -rf $(OBJ)
 
 fclean: clean
-	@ rm $(NAME)
-	@ rm a.out
+	@ rm -rf $(NAME)
+	@ rm -rf a.out
 
 re: fclean all
