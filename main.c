@@ -9,7 +9,6 @@ extern char *ft_strcpy(char * dst, const char * src);
 extern int ft_strcmp(const char *s1, const char *s2);
 extern size_t ft_write(int fil_des, const void *buf, size_t n_byte);
 
-
 int main() {
 /*
     printf("----------------------- ft_strlen ----------------------- \n");
@@ -39,10 +38,14 @@ int main() {
     const char *s1 = "";
     const char *s2 = "Print this string to the standard output\n";
 
-    //printf("%lu",write(1, s1, strlen(s1)));
-    //printf("%lu",write(1, s2, strlen(s2)));
+    write(-1, NULL, strlen(s1));
+    printf("Errno: %d\n", errno);
+    printf("Error: %s\n", strerror(errno));
 
-    printf("%zu: \n", ft_write(1, s1, strlen(s1)));
-    printf("%zu: \n", ft_write(1, s2, strlen(s2)));
+/*----------------------------------------------------------------------------------*/
+
+    ft_write(-1, NULL, strlen(s1));
+    printf("Errno: %d\n", errno);
+    printf("Error: %s\n", strerror(errno));
     return 0;
 }
