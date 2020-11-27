@@ -12,13 +12,13 @@ _ft_strcmp:
 
 compare:
     inc r8
-    mov cl, byte [rdi + r8]
-    cmp cl, byte [rsi + r8]
+    mov r10, [rdi + r8]
+    cmp r10, [rsi + r8]
 
     jg  IS_GREAT
     jl  IS_LESS
 
-    cmp cl, 0
+    cmp r10d, 0
     je IS_EQUAL
     jmp compare
 
