@@ -20,6 +20,10 @@ library from those source files called ‘libasm.a‘
 * read
 * strdup
 
+**Requirements:**
+
+Mac OSX
+
 ## Usage
 
 * `git clone https://github.com/MoBoustta/libasm.git && cd libasm`
