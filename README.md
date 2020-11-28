@@ -22,6 +22,6 @@ library from those source files called ‘libasm.a‘
 
 ## Usage
 
-`git clone https://github.com/MoBoustta/libasm.git && cd libasm`
-`make`
-`make build`
+* `git clone https://github.com/MoBoustta/libasm.git && cd libasm`
+* `make`
+* `make build`
