@@ -8,18 +8,18 @@ global _ft_strcmp
 section .text
 
 _ft_strcmp:
-    mov r8, -1
+    mov r11, 0
 
 compare:
-    inc r8
-    mov cl, byte [rdi + r8]
-    cmp cl, byte [rsi + r8]
+    mov r15, [rdi + r11]
+    cmp r15, [rsi + r11]
 
     jg  IS_GREAT
     jl  IS_LESS
 
-    cmp cl, 0
+    cmp r15, 0
     je IS_EQUAL
+    inc r11
     jmp compare
 
 IS_EQUAL:
