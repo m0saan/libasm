@@ -19,4 +19,9 @@ library from those source files called ‘libasm.a‘
 * write
 * read
 * strdup
-4
+
+## Usage
+
+`git clone https://github.com/MoBoustta/libasm.git && cd libasm`
+`make`
+`make build`
