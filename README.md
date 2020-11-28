@@ -9,3 +9,12 @@ All source files are:
 * written in 64 bits ASM.
 * compiled with nasm asssembler.
 * written using the Intel syntax, not the AT&T.
+
+I will rewrite the following functions in asm;
+
+◦ strlen
+◦ strcpy
+◦ strcmp
+◦ write
+◦ read
+◦ strdup
