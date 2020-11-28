@@ -27,20 +27,18 @@ int main() {
     printf("dst1: %s\n", ft_strcpy(dst1, src));
     printf("dst: %s\n", strcpy(dst, src));
 */
-
     printf("----------------------- ft_strcmp ----------------------- \n");
 
-    const char *str1 = "H";
-    const char *str2 = "Hss";
+    //const char *str1 = "H";
+    //const char *str2 = "Hss";
 
     const char *s1 = "bon";
     const char *s2 =  "";
 
     printf("%d\n", strcmp(s1, s2));
     printf("%d\n", ft_strcmp(s1, s2));
-/*
     printf("----------------------- ft_write ----------------------- \n");
-
+/*
     const char *s1 = "";
     const char *s2 = "Print this string to the standard output\n";
 
@@ -56,9 +54,12 @@ int main() {
     //printf("Errno: %d\n", errno);
     //printf("Error: %s\n", strerror(errno));
 
-    //const char *s2 = "Duplicate this string\n";
-    //char *rslt = (char*) malloc(sizeof(char) * strlen(s2) + 1);
-    //rslt = ft_strdup(s2);
-    //printf("%s\n", rslt);
-    //return 0;
+    //const char *s2 = "";
+    //char *rslt1 = (char*) malloc(sizeof(char) * strlen(s2) + 1);
+    //char *rslt2 = (char*) malloc(sizeof(char) * strlen(s2) + 1);
+    //rslt1 = strdup(s2);
+    //rslt2 = ft_strdup(s2);
+    //printf("|%s|\n", rslt1);
+    //printf("|%s|\n", rslt2);
+    return 0;
 }
