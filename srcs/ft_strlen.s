@@ -17,3 +17,8 @@ end:
     sub rax, rdi
     ret
     call exit
+
+exit:
+    mov     rax, 0x2000001 ; exit
+    mov     rdi, 0
+    syscall
