@@ -6,11 +6,9 @@ extern ___error
 section     .text
 
 _ft_read:
-    mov rbx, rdx
     mov rax, SYS_READ_MAC
     syscall
     jc error
-    mov rdx, rax
     ret
 
 error:
