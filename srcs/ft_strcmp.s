@@ -10,6 +10,7 @@ _ft_strcmp:
     xor r14b, r14b
     xor r15b, r15b
     mov r11, 0
+    call check_byte
     call compare
 
 check_byte:
