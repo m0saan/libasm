@@ -1,17 +1,3 @@
-;char    *_ft_strdup(char *s)
-;{
-;    int i = 0;
-;    char *str = (char *) malloc(sizeof(char) * (strlen(s) + 1))
-;    while (s[i] != '\0')
-;    {
-;        str[i] = s[i];
-;        i += 1;
-;    }
-;    str[i] = '\0';
-;    return (str)
-;}
-
-
 extern _ft_strlen
 extern _ft_strcpy
 extern ___error
