@@ -3,29 +3,16 @@ global      _ft_strcpy
 section     .text
 
 _ft_strcpy:
-    mov r8, 0
+    mov r8, 0 ; set r8 to 0
 
 loop :
-    mov     cl, byte [rsi + r8]
-    mov     byte [rdi + r8],cl
-    inc     r8
-    cmp     cl, 0
+    mov     cl, byte [rsi + r8] ;get a char from src and put it into cl.
+    mov     byte [rdi + r8],cl  ;put the char in cl into the destination.
+    inc     r8  ;increment r8.
+    cmp     cl, 0 ;compare char in cl if it is NULL.
     jne     loop
     jmp     end
 
 end:
-    mov rax, rdi
-    ret
-
-exit:
-    mov rax, 0x2000001
-    mov rdi, 0
-    syscall
-
-
-;print:
-    ;mov     rax, 0x2000004
-    ;mov     rsi, rdi
-    ;mov     rdi, 1
-    ;mov     rdx, 23
-    ;syscall
+    mov rax, rdi ;move the string in dest to rax so to be returned.
+    ret ; return.
