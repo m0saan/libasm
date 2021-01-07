@@ -3,7 +3,6 @@
 NAME = libasm.a
 NASM =  nasm -f macho64
 CC = gcc -Wall -Wextra -Werror
-SANITIZER = -fsabitize=address
 
 SRCS_PATH = srcs/
 OBJS_PATH = objs/
