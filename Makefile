@@ -22,6 +22,7 @@ $(NAME): $(SRC)
 	@ $(NASM) srcs/ft_write.s
 	@ $(NASM) srcs/ft_read.s
 	@ $(NASM) srcs/ft_strdup.s
+	@ mkdir -p objs
 	@ mv srcs/*.o $(OBJS_PATH)
 	@ ar rc $(NAME) $(OBJ)
 	@ ranlib $(NAME)
