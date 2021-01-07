@@ -4,33 +4,26 @@ NAME = libasm.a
 NASM =  nasm -f macho64
 CC = gcc -Wall -Wextra -Werror
 
-SRCS_PATH = srcs/
-OBJS_PATH = objs/
-SRCS_NAMES = ft_strcmp.s ft_strcpy.s ft_strlen.s ft_write.s ft_read.s ft_strdup.s
 OBJS_NAMES = ft_strcmp.o ft_strcpy.o ft_strlen.o ft_write.o ft_read.o ft_strdup.o
 
-SRC = $(addprefix $(SRCS_PATH), $(SRCS_NAMES))
-OBJ = $(addprefix $(OBJS_PATH), $(OBJS_NAMES))
 
 all: $(NAME)
 
 $(NAME): $(SRC)
-	@ $(NASM) srcs/ft_strcmp.s
-	@ $(NASM) srcs/ft_strcpy.s
-	@ $(NASM) srcs/ft_strlen.s
-	@ $(NASM) srcs/ft_write.s
-	@ $(NASM) srcs/ft_read.s
-	@ $(NASM) srcs/ft_strdup.s
-	@ mkdir -p objs
-	@ mv srcs/*.o $(OBJS_PATH)
-	@ ar rc $(NAME) $(OBJ)
+	@ $(NASM) ft_strcmp.s
+	@ $(NASM) ft_strcpy.s
+	@ $(NASM) ft_strlen.s
+	@ $(NASM) ft_write.s
+	@ $(NASM) ft_read.s
+	@ $(NASM) ft_strdup.s
+	@ ar rc $(NAME) $(OBJS_NAMES)
 	@ ranlib $(NAME)
 
 build:
 	@ gcc main.c $(NAME) && ./a.out
 
 clean:
-	@ rm -rf $(OBJ)
+	@ rm -rf $(OBJS_NAMES)
 
 fclean: clean
 	@ rm -rf $(NAME)
