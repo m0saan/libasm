@@ -24,8 +24,8 @@ _ft_strdup:
     ret
 
 error:
-    push rax
     call ___error
-    pop qword[rax]
-    mov rax, -1
+    mov r8, 12
+    mov [rax], r8
+    mov rax, 0
     ret
